@@ -1,0 +1,278 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial;
+  color: white;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+.link-line {
+  border-bottom: 2px solid black;
+}
+  
+.header {
+  position: absolute;
+  display: flex;
+  font-variant: small-caps;
+  align-items: center;
+  width: 100vw;
+}
+
+.header button {
+  font-family: Arial;
+  font-variant: small-caps;
+  background: #7d0d13;
+  color: white;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 10px;
+}
+
+.header * {
+  margin: 1rem 2rem;
+  font-size: normal;
+  font-weight: 400;
+}
+
+
+.header .right {
+  position: absolute;
+  right: 0;
+}
+
+.right a {
+  color: #bb656b;
+  transition: 200ms;
+  border-bottom: 2px solid transparent;
+}
+
+.right a:hover {
+  border-bottom: 2px solid #bb656b;
+}
+
+.content-home {
+  position: relative;
+  display: flex;
+  top: 50vh;
+  translate: 0% -50%;
+  margin: 0 5rem;
+  justify-content: space-between;
+  animation: fadein 500ms ease-in-out;
+}
+
+.content-home .text {
+  flex: 50;  
+}
+
+.text img {
+  /* ledsen för positioning */
+  position: relative;
+  width: calc(50vw - 10rem);
+  border-radius: 30px;
+  box-shadow: 20px 30px 30px 0 rgba(0, 0, 0, .25);
+  right: 0;
+  translate: 5rem 0;
+}
+
+.dot {
+  opacity: 0;
+  animation: dot infinite linear 2.5s;
+}
+
+@keyframes dot {
+  50% {
+    opacity: 1;
+  }
+}
+
+.content-home h1 {
+  color: #000000;
+  font-variant: small-caps;
+  font-size: 96px;
+}
+
+.content-home p {
+  color: #000000;
+}
+
+.news {
+  background: rgb(242, 242, 242);
+  margin-top: 20%;
+  padding-top: 2.5%;
+  border-top: 2px solid rgb(222, 222, 222);
+  border-bottom: 2px solid rgb(222, 222, 222);
+}
+
+.article {
+  background-color: white;
+  box-shadow: 0 0 50px 5px rgba(0, 0, 0, .25);
+  width: 800px;
+  margin: 5% auto;
+  padding-top: 18px;
+  color: black;
+}
+
+.article h1 {
+  font-size: 20px;
+  font-variant: small-caps;
+  font-weight: 100;
+  margin: 0 18px 18px 18px;
+}
+
+
+.foot {
+  color: black;
+  padding: 5%;
+  text-align: center;
+}
+
+.foot h1 {
+  font-size: 24px;
+  font-variant: small-caps;
+  font-weight: 100;
+}
+
+.foot li {
+  display: inline;
+  margin-right: 5px;
+}
+
+
+/* ABOUT US PAGE */
+/* ABOUT US PAGE */
+/* ABOUT US PAGE */
+
+.content-about {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  translate: -50% -50%;
+
+  color: #000000;
+  animation: fadein 500ms ease-in-out;
+}
+
+.content-about h1 {
+  font-variant: small-caps;
+}
+
+.content-about p {
+  opacity: 1;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+}
+
+
+
+/* LOCATIONS */
+/* LOCATIONS */
+/* LOCATIONS */
+
+.content-loc {
+  color: #000000;
+  padding: 10rem 7.5rem;
+  animation: fadein 500ms ease-in-out;
+}
+
+.content-loc ul {
+  position: relative;
+  list-style: none;
+  width: auto;
+  margin: 0 20%;
+  padding: 1rem;
+}
+
+.content-loc ul li {
+  padding: 2rem;
+  margin: 2rem 1rem;
+  border-radius: 10px;
+
+  background: rgb(198, 198, 198);
+  box-shadow: 0 0 50px 5px rgba(0, 0, 0, .25);
+  position: relative;
+  
+  transition: 200ms;
+
+  animation: fly 1s ease-in-out;
+}
+
+
+.content-loc ul li:nth-child(even) {
+  text-align: right;
+  animation: flyright 1s ease-in-out;
+}
+
+.content-loc ul li:hover {
+  background: rgb(215, 215, 215);
+  cursor: pointer;
+}
+
+.content-loc ul li:nth-child(even)::after,
+.content-loc ul li:nth-child(odd)::before {
+  content: '';
+  background: url(src/mapmarker.png) no-repeat;
+  width: 25px;
+  height: 25px;
+  translate: 0 -15%;
+}
+
+.content-loc ul li:nth-child(even)::after {
+  float: right;
+  margin-left: 20px;
+}
+
+.content-loc ul li:nth-child(odd)::before {
+  float: left;
+  margin-right: 20px;
+}
+
+@keyframes fly {
+  from {
+    opacity: 0;
+    transform: translate(-100%, 0);
+  }
+}
+
+@keyframes flyright {
+  from {
+    opacity: 0;
+    transform: translate(100%, 0);
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .content-loc ul {
+    margin: 0 1%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .content-loc ul li:nth-child(even) {
+    text-align: center;
+  }
+
+  .content-loc ul li:nth-child(even)::after,
+  .content-loc ul li:nth-child(odd)::before {
+    display: none;
+  }
+}
+  

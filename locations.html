@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STOIC: locations</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="src/logo.png">
+
+</head>
+<body>
+    <div class="header">
+        <div class="left">
+          <a href="../">home</a>
+          <a href="about.html">about us</a>
+          <a href="" class="link-line">locations</a>
+          <button>darkmode</button>
+        </div>
+    </div>
+
+    <div class="content-loc">
+        <div class="list">
+            <ul>
+                <li onclick="link('https://goo.gl/maps/T8V3fDmYerTtr6h6A')">ICA Nära Luthagen</li>
+                <li onclick="link('https://goo.gl/maps/jJApav2ujcLCh6os8')">Hemköp Rosendal</li>
+                <li onclick="link('https://goo.gl/maps/vuHqkMh5wNwnHbj68')">BAUHAUS Boländerna</li>
+                <li onclick="link('https://goo.gl/maps/J1K2Fhes5GZma7F58')">COOP Centralstation</li>  
+                <li onclick="link('https://goo.gl/maps/uBPAwSTvUN6FxGTJ6')">Arken Zoo Boländerna</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function link(url) {
+            window.open(url, '_blank');        
+        }
+    </script>
+</body>
+</html>
