@@ -31,16 +31,6 @@ a:hover {
   width: 100vw;
 }
 
-.header button {
-  font-family: Arial;
-  font-variant: small-caps;
-  background: #7d0d13;
-  color: white;
-  padding: 5px 15px;
-  border: none;
-  border-radius: 10px;
-}
-
 .header * {
   margin: 1rem 2rem;
   font-size: normal;
